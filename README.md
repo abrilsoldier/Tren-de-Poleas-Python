@@ -4,22 +4,39 @@ Codigo de Tren de Poleas Python
 
 
 import cv2
+
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 import matplotlib.image as img
+
 import tkinter as tk
+
 from tkinter import ttk
+
+
  
 ventana = tk.Tk()
+
 ventana.geometry("900x790")
+
 ventana.title("Tren de Poleas")
+
 var=tk.StringVar()
+
 variable1=tk.StringVar()
+
 contenedor = ttk.Frame(ventana)
+
 canvas = tk.Canvas(contenedor, height = 350,width =450)
+
 ventana.configure(background='black')
+
 scrollbar_v = ttk.Scrollbar(contenedor, orient="vertical", command=canvas.yview)
+
 scrollbar_h = ttk.Scrollbar(contenedor, orient="horizontal", command=canvas.xview)
+
 contenedor_scroll= ttk.Frame(canvas)
 
 
