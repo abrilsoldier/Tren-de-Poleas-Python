@@ -16,6 +16,8 @@ import tkinter as tk
 from tkinter import ttk
 
 
+
+
  
 ventana = tk.Tk()
 
@@ -41,26 +43,38 @@ contenedor_scroll= ttk.Frame(canvas)
 
 
 
+
 #--------Mostrar cálculo a realizar--------------
+
 formula=tk.Label(ventana,
 	text="""Simulación del cálculo de la velocidad del último árbol de
 un tren de poleas constituido por tres escalonamientos en mm
 a partir de la ecuación de la relación de transmisión y regimen del funcionamiento del motor""",
 	font=("Century Gothic", 11), bg='black', fg='pink')
+	
 formula.pack(padx=20, pady=10)
 
 
+
+
 #--------Mostrar fórmula de la relación de transmisión múltiple---------
+
 calculo_name=tk.Label(ventana, text="""  Fórmula de la relación de transmisión multiple
     i =(D1*D3*D5)/(D2*D4*D6)
     VelocidadN6=i*velocidadN1""",
 	fg="#D684CF", bg='black',
 	font=("Century Gothic",10, 'bold'))
+	
 calculo_name.pack(padx=5, pady=16)
+
+
+
 
 #-----Imagen------
 img=tk.PhotoImage(file="tren_poleas_31.png")
+
 lbl_img=tk.Label(ventana, image=img)
+
 lbl_img.pack(padx=5, pady=10)
  
 contenedor_scroll.bind(
@@ -195,10 +209,15 @@ for i in range(1,2):
 
 
  
+	
 contenedor.pack()
+	
 canvas.pack(side="left", fill="both", expand=True)
+	
 scrollbar_v.pack(side="right", fill="y")
+	
 scrollbar_h.pack(side="bottom", fill="x")
+	
  
 ventana.mainloop()
 
